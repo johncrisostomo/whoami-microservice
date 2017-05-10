@@ -3,11 +3,7 @@ let express = require('express');
 let app = express();
 
 app.get('/api/whoami', (req, res) => {
-  let payload = {
-    ipaddress: null,
-    language: null,
-    software: null,
-  };
+  let payload = {};
 
   payload.language = req.get('Accept-Language').split(',')[0];
   payload.ipv6address = req.ip;
