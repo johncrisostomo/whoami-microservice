@@ -2,7 +2,7 @@ let express = require('express');
 
 let app = express();
 
-app.get('/api/whoami', (res, req) {
+app.get('/api/whoami', (res, req) => {
 
 });
 
