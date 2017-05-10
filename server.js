@@ -10,7 +10,8 @@ app.get('/api/whoami', (req, res) => {
   };
 
   payload.language = req.get('Accept-Language').split(',')[0];
-  payload.ipaddress = req.ip;
+  payload.ipv6address = req.ip;
+  payload.ipv4address = req.ip.replace('::ffff:', '');
   payload.software= req.get('User-Agent').split(/\(([^\(]+)\)/)[1];
 
   res.json(payload);
